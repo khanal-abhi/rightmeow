@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var User = require('../models/user');
+
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler
 	// Passport adds this method to request object. A middleware is allowed to add properties to
@@ -83,6 +85,40 @@ module.exports = function(passport){
 			title: 'RightMeow - Home',
 			message: req.flash('message'),
 			user: req.user
+		});
+	});
+
+	router.post('/edit/profile', isAuthenticated, function(req, res){
+		var username = req.body.username;
+		console.log(req.body);
+		User.findOne({username: username}, function(err, user){
+			if(err) {
+				res.redirect('/edit/profile');
+			}
+			if(!user) {
+				req.flash('message', 'User not found. Please try loggin in again!');
+				res.redirect('/login');
+			}
+			if(user) {
+				user.firstName = req.body.firstName || user.firstName;
+				user.lastName = req.body.lastName || user.lastName;
+				user.email = req.body.email || user.email;
+				user.add1 = req.body.add1 || user.add1;
+				user.add2 = req.body.add2 || user.add2;
+				user.city = req.body.city || user.city;
+				user.state = req.body.state || user.state;
+				user.zipcode = req.body.zipcode || user.zipcode;
+
+				user.save(function(err, user){
+					if(err) {
+						throw err;
+					}
+					if(user) {
+						req.flash('message', 'Profile update successfull!');
+						res.redirect('/profile');
+					}
+				});
+			}
 		});
 	});
 

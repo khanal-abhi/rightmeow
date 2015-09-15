@@ -23,10 +23,17 @@ module.exports = mongoose.model('User',{
 		type: String,
 		required: true
 	},
-	subscribed: Boolean,
+	subscribed: {
+		type: Boolean,
+		default: false
+	},
 	add1: String,
 	add2: String,
 	city: String,
 	state: String,
 	zipcode: String,
+	img: {
+		type: String,
+		default: 'avatar.png'
+	}
 });

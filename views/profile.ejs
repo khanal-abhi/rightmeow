@@ -11,13 +11,29 @@
     Main content goes here ===================
     ==========================================
     -->
-    <div class="container">
-      <div class="">
-        <h3>Welcome <%= user.firstName %>!</h3>
-        <div class="">
-          <p>First Name: <%= user.firstName %></p>
-          <p>Last Name: <%= user.lastName %></p>
-          <p>Email Address: <%= user.email %></p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img class="foto" src="/images/<%= user.img %>"/>
+          <h3><%= user.firstName %> <%= user.lastName %></h3>
+          <p><%= user.email %></p>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <h2 class="centered"><%= user.firstName %> <%= user.lastName %></h2>
+          <div class="info-block">
+            <% if(message) { %>
+            <span class="my-flash-positive"><%= message %></span>
+            <% } %>
+            <h3>Account information:</h3>
+            <p>Name: <%= user.firstName %> <%= user.lastName %></p>
+            <p>Email: <%= user.email %></p>
+            <h5>Address:</h2>
+            <p><%= user.add1 %></p>
+            <p><%= user.add2 %></p>
+            <p><%= user.city %> <%= user.state %> <%= user.zipcode %></p>
+            <a href="/edit/profile">Edit account &raquo;</a>
+
+          </div>
         </div>
       </div>
     </div>

@@ -17,7 +17,14 @@
         <div class="left">
           <h1 class="hero-unit">RightMeow</h1>
           <p>Introducing RightMeow boxes!</p>
-          <a class="btn btn-success" href="/signup">Sign Up&nbsp;&raquo;</a>
+          <% if(!user) { %>
+            <a class="btn btn-primary" href="/login">Login&nbsp;&raquo;</a>
+            <a class="btn btn-success" href="/signup">Sign Up&nbsp;&raquo;</a>
+          <% } %>
+          <% if(user) { %>
+            <a class="btn btn-primary" href="/profile">Profile&nbsp;&raquo;</a>
+            <a class="btn btn-danger" href="/logout">Logout&nbsp;&raquo;</a>
+          <% } %>
         </div>
         <div class="right">
           <img src="/images/rightmeow.png" alt="RightMeow" />
