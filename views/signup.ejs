@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/header %>
+  </head>
+  <body>
+    <% include ./partials/navigation %>
+
+    <!--
+    ==========================================
+    Main content goes here ===================
+    ==========================================
+    -->
+    <div class="container">
+      <div class="login-form">
+        <% if(message != "") {%>
+          <span class="my-flash"><%= message %></span>
+          <% } %>
+        <form role="form" method="post" action="/signup" class="form">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input class="form-control" id="firstName" name="firstName" required minLength=2 />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input class="form-control" id="lastName" name="lastName" required minLength=2 />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input class="form-control" id="email" name="email" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input class="form-control" id="username" name="username" required minLength=4/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input class="form-control" id="password" name="password" type="password" required minLength=8/>
+          </div>
+          <input class="btn btn-primary form-cotrol" type="submit" value="Sign Up&nbsp;&raquo;" />
+        </form>
+        <a class="centered" href="/login">Click here to log in instead.</a>
+      </div>
+    </div>
+
+    <!--
+    ==========================================
+    Main content ends here ===================
+    ==========================================
+    -->
+
+    <% include ./partials/footer %>
+  </body>
+</html>

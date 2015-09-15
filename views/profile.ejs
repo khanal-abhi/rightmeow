@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/header %>
+  </head>
+  <body>
+    <% include ./partials/navigation %>
+
+    <!--
+    ==========================================
+    Main content goes here ===================
+    ==========================================
+    -->
+    <div class="container">
+      <div class="">
+        <h3>Welcome <%= user.firstName %>!</h3>
+        <div class="">
+          <p>First Name: <%= user.firstName %></p>
+          <p>Last Name: <%= user.lastName %></p>
+          <p>Email Address: <%= user.email %></p>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    ==========================================
+    Main content ends here ===================
+    ==========================================
+    -->
+
+    <% include ./partials/footer %>
+  </body>
+</html>

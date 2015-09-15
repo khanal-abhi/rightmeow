@@ -1,88 +1,86 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 0;
+  margin: 0;
 }
 
-a {
-  color: #00B7FF;
+.login-form {
+  margin: 50px auto 0 auto;
+  width: 350px;
+  padding: 40px 20px 40px 20px;
+  background-color: #DDDDDD;
+  border-radius: 10px;
 }
 
-.form-signin{
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
+form {
+  margin: 10px 10px 10px 10px;
 }
-.form-signin .form-signin-heading, .form-signin .checkbox{
-    margin-bottom: 10px;
+
+.centered {
+  text-align: center;
 }
-.form-signin .checkbox{
-    font-weight: normal;
+
+.footer {
+  bottom: 0;
+  left: 0;
+  margin-top:50px;
+  padding: 10px 0 10px 0;
+  display: block;
+  width: 100%;
+  background-color: #444444;
+  color: #FFFFFF;
 }
-.form-signin .form-control{
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+
+.my-flash {
+  color: #CC3333;
+  text-decoration: underline;
 }
-.form-signin .form-control:focus{
-    z-index: 2;
+
+.jumbo-pad {
+  padding: 30px 10px 30px 10px;
+  display: block;
 }
-.form-signin input[type="text"]{
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+
+.grey {
+  background-color: #EEEEEE;
 }
-.form-signin input[type="password"]{
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+
+.right {
+  float: right;
 }
-.form-signin input[type="password"].nomargin{
-	margin-bottom: 0px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+
+.left {
+  float: left;
 }
-.account-wall{
-    margin-top: 20px;
-    padding: 40px 0px 20px 0px;
-    background-color: #f7f7f7;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+.col-img {
+  width: 100%;
+  padding: 5% 25% 5% 25%;
+  opacity: .80;
 }
-.signup-wall{
-	margin-top: 20px;
-    padding: 20px 0px 20px 0px;
-    background-color: #f7f7f7;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);	
+
+.brands {
+
 }
-.login-title{
-    color: #555;
-    font-size: 18px;
-    font-weight: 400;
-    display: block;
+
+.dark {
+  background-color: #333333;
+  color: #FFFFFF;
 }
-.profile-img{
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+
+.faq{
+  margin:20px auto;
+  max-width: 600px;
 }
-.new-account{
-    display: block;
-    margin-top: 10px;
+
+.faq li{
+  margin: 10px 0;
 }
-h1.error-message{
-    color: red;
-}
-ul.user-details{
-    list-style: none;
+
+.profile-form {
+  max-width: 600px;
 }
