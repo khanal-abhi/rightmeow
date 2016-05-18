@@ -1,13 +1,4 @@
-passport-mongo
+Rightmeow.com
 ==============
 
-This repository serves as an example of a basic Node.js application which is using [Passport](http://passportjs.org/) as the authentication middleware for authenticating against a locally configured Mongo backend
-
-Steps to run the app
-=====================
-* After cloning the repo, install the dependencies by running **npm install**
-* To start the server, run **npm start** on the base directory
-
-Perquisites
-============
-The server assumes that you have a local mongo instance running. This means if you have mongo installed locally, all you need to do is configure the db.js file correctly and run the mongod daemon
+This repository is the main repository for the website rightmeow.com. It is built on a node stack. I cloned the Passport base repository to get started since I would be using the authentication system. This is a semi functional site that has already implemented authentication. The goal was to implement payment subscription using Paypal. However, the project got scrapped but it was a great experience with the (almost) MEAN stack.
